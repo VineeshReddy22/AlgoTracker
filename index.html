@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlgoTracker — Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <!-- Fixed Header -->
+  <header class="site-header">
+    <span class="logo-text">AlgoTracker</span>
+    <span class="tagline">Master DSA. One problem at a time.</span>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-inner">
+      <h1 class="hero-title">
+        Your DSA <br />
+        <span class="accent">Progress Hub</span>
+      </h1>
+      <p class="hero-sub">
+        Track algorithms, measure growth, and level up your problem-solving skills.
+      </p>
+      <!-- Stat Boxes -->
+      <div class="stat-row">
+        <div class="stat-box stat-green">
+          <span class="stat-num">84</span>
+          <span class="stat-label">Problems</span>
+        </div>
+        <div class="stat-box stat-yellow">
+          <span class="stat-num">12</span>
+          <span class="stat-label">Topics</span>
+        </div>
+        <div class="stat-box stat-red">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Difficulty Tiers</span>
+        </div>
+      </div>
+      <!-- Buttons -->
+      <div class="btn-group-hero">
+        <button class="btn-primary-custom" onclick="openModal('login')">Login</button>
+        <button class="btn-outline-custom" onclick="openModal('signup')">Sign Up</button>
+      </div>
+      <!-- Feature Cards -->
+      <div class="features-row">
+        <div class="feature-card">
+          <div class="feat-icon">▶</div>
+          <h4>Track Progress</h4>
+          <p>Mark problems complete and watch your stats grow in real time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">◆</div>
+          <h4>Customized Sheet</h4>
+          <p>Hand-picked DSA problems from arrays to dynamic programming.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">■</div>
+          <h4>Resources</h4>
+          <p>YouTube channels, platforms, and study tips — all in one place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="closeAll()"></div>
+  <!-- LOGIN MODAL -->
+  <div class="modal-box" id="loginModal">
+    <h3>Welcome back</h3>
+    <p class="modal-sub">Login to your AlgoTracker account</p>
+    <label>Username</label>
+    <input type="text" id="loginUser" placeholder="Enter username" autocomplete="off" />
+    <span class="err" id="userErr"></span>
+    <label>Password</label>
+    <input type="password" id="loginPass" placeholder="Enter password" />
+    <span class="err" id="passErr"></span>
+    <div class="modal-hint">
+      <small>Demo: <code>demo_user</code> / <code>demo_password</code></small>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-outline-custom" onclick="closeAll()">Cancel</button>
+      <button class="btn-primary-custom" onclick="validateLogin()">Login</button>
+    </div>
+  </div>
+  <!-- SIGNUP MODAL -->
+  <div class="modal-box" id="signupModal">
+    <h3>Create Account</h3>
+    <p class="modal-sub">Join AlgoTracker today</p>
+    <div class="form-two-col">
+      <div>
+        <label>First Name</label>
+        <input type="text" id="firstName" placeholder="First name" />
+        <span class="err" id="firstNameErr"></span>
+      </div>
+      <div>
+        <label>Last Name</label>
+        <input type="text" id="lastName" placeholder="Last name" />
+        <span class="err" id="lastNameErr"></span>
+      </div>
+    </div>
+    <label>Email</label>
+    <input type="text" id="regEmail" placeholder="email@example.com" />
+    <span class="err" id="regEmailErr"></span>
+    <label>Phone Number</label>
+    <input type="text" id="regPhone" placeholder="10-digit number" maxlength="10" />
+    <span class="err" id="regPhoneErr"></span>
+    <label>Date of Birth</label>
+    <input type="date" id="regDob" />
+    <span class="err" id="regDobErr"></span>
+    <label>Password</label>
+    <input type="password" id="regPass" placeholder="Min 8 characters" />
+    <span class="err" id="regPassErr"></span>
+    <div class="strength-bar">
+      <div id="strengthFill"></div>
+    </div>
+    <label>Confirm Password</label>
+    <input type="password" id="regConfirm" placeholder="Re-enter password" />
+    <span class="err" id="regConfirmErr"></span>
+    <label>Gender</label>
+    <div class="radio-group">
+      <label class="radio-label"><input type="radio" name="gender" value="male" /> Male</label>
+      <label class="radio-label"><input type="radio" name="gender" value="female" /> Female</label>
+      <label class="radio-label"><input type="radio" name="gender" value="other" /> Other</label>
+    </div>
+    <span class="err" id="genderErr"></span>
+    <label class="checkbox-label">
+      <input type="checkbox" id="terms" />
+      I agree to the Terms &amp; Conditions
+    </label>
+    <span class="err" id="termsErr"></span>
+    <div class="modal-actions">
+      <button class="btn-outline-custom" onclick="closeAll()">Cancel</button>
+      <button class="btn-primary-custom" onclick="validateSignup()">Register</button>
+    </div>
+  </div>
+  <!-- CONFIRM MODAL -->
+  <div class="modal-box modal-confirm" id="confirmModal">
+    <div class="confirm-icon">✓</div>
+    <h3 id="confirmMsg">Logged in successfully!</h3>
+    <p class="modal-sub">Redirecting to your dashboard...</p>
+    <button class="btn-primary-custom" onclick="window.location.href='home.html'">
+      Go to Dashboard
+    </button>
+  </div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 AlgoTracker. All rights reserved.</p>
+  </footer>
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlgoTracker — Profile</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+  <!-- Fixed header z-index: 100 (task) -->
+  <header class="site-header" id="siteHeader">
+    <a class="logo-text" href="home.html">AlgoTracker</a>
+    <nav class="main-nav">
+  <a class="nav-link" href="home.html">DSA Sheet</a>
+  <a class="nav-link" href="profile.html">Profile</a>
+  
+  <!-- DROPDOWN BUTTON - ADD THIS -->
+  <div class="dropdown">
+    <button class="nav-link dropdown-btn" onclick="toggleDropdown()">
+      Resources ▼
+    </button>
+    <div class="dropdown-content" id="resourcesDropdown">
+          <a href="resource.html#books"> Study Resources</a>
+          <a href="resource.html#youtube">YouTube Channels</a>
+          <a href="resource.html#platforms"> Online Platforms</a>
+          <a href="resource.html#tips"> Study Tips</a>
+          <a href="contact.html"> Contact & Feedback</a>
+        </div>
+  </div>
+  
+  <a class="nav-link" href="contact.html">Contact</a>
+  <a class="nav-link logout-link" href="index.html">Logout</a>
+</nav>
+  </header>
+
+  <div class="page-content">
+
+    <!-- Hero section with profile image placeholder + bio (About page task) -->
+    <div class="profile-hero">
+      <div class="avatar-ring">
+        <div class="avatar-placeholder">DX</div>
+      </div>
+      <div class="profile-hero-text">
+        <h1>Demo Name XYZ</h1>
+        <p class="hero-bio">Computer Science student at VIT Vellore. Passionate about algorithms, competitive programming, and building efficient solutions. Solving DSA problems one commit at a time.</p>
+        <div class="profile-tags">
+          <span class="ptag">Student</span>
+          <span class="ptag">Vellore, India</span>
+          <span class="ptag">&#9670; Online</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Three stacked info divs -->
+    <div class="three-cols">
+      <div class="info-col col-blue">
+        <div class="col-icon">&#9670;</div>
+        <h4>Experience</h4>
+        <p>Solved 44 problems on GFG. Participated in 3 coding contests. Built a personal portfolio website.</p>
+      </div>
+      <div class="info-col col-purple">
+        <div class="col-icon">&#9632;</div>
+        <h4>Skills</h4>
+        <p>C++, Python, HTML/CSS, JavaScript, Bootstrap. Data Structures, Algorithms, Problem Solving.</p>
+      </div>
+      <div class="info-col col-teal">
+        <div class="col-icon">&#9654;</div>
+        <h4>Mission</h4>
+        <p>Master every topic in the DSA sheet. Reach top 100 on the platform. Crack product-based companies.</p>
+      </div>
+    </div>
+
+    <!-- Student Profiles Table -->
+    <div class="section-card">
+      <h3 class="section-title">Student Profiles</h3>
+      <div class="table-scroll">
+        <table class="profile-table">
+          <thead>
+            <tr>
+              <th>Photo</th>
+              <th>Name</th>
+              <th>Roll No</th>
+              <th>Department</th>
+              <th>Email</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="table-avatar" style="background:#6366f1;">DX</div></td>
+              <td>Demo Name XYZ</td>
+              <td>22BCE1234</td>
+              <td>Computer Science</td>
+              <td>demo@vit.ac.in</td>
+              <td><span class="badge-online">Online</span></td>
+            </tr>
+            <tr>
+              <td><div class="table-avatar" style="background:#0f6e56;">AK</div></td>
+              <td>Arjun Kumar</td>
+              <td>22BCE1235</td>
+              <td>Computer Science</td>
+              <td>arjun@vit.ac.in</td>
+              <td><span class="badge-offline">Offline</span></td>
+            </tr>
+            <tr>
+              <td><div class="table-avatar" style="background:#ba7517;">PS</div></td>
+              <td>Priya Sharma</td>
+              <td>22BCE1236</td>
+              <td>Information Tech</td>
+              <td>priya@vit.ac.in</td>
+              <td><span class="badge-online">Online</span></td>
+            </tr>
+            <tr>
+              <td><div class="table-avatar" style="background:#993556;">RV</div></td>
+              <td>Rahul Verma</td>
+              <td>22BCE1237</td>
+              <td>ECE</td>
+              <td>rahul@vit.ac.in</td>
+              <td><span class="badge-offline">Offline</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- DSA Leaderboard -->
+    <div class="section-card">
+      <h3 class="section-title">DSA Leaderboard</h3>
+      <div class="table-scroll">
+        <table class="profile-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Student</th>
+              <th>Score</th>
+              <th>Solved</th>
+              <th>Top Subjects</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="medal gold"> 1st</span></td>
+              <td>Arjun Kumar</td>
+              <td class="easy">980</td>
+              <td>118</td>
+              <td>
+                <ul class="subject-list">
+                  <li>Dynamic Programming</li>
+                  <li>Graphs</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="medal silver"> 2nd</span></td>
+              <td>Priya Sharma</td>
+              <td class="easy">920</td>
+              <td>109</td>
+              <td>
+                <ul class="subject-list">
+                  <li>Trees</li>
+                  <li>Arrays</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="medal bronze"> 3rd</span></td>
+              <td>Demo Name XYZ</td>
+              <td class="medium">860</td>
+              <td>98</td>
+              <td>
+                <ul class="subject-list">
+                  <li>Sorting</li>
+                  <li>Searching</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="rank-num">4</span></td>
+              <td>Rahul Verma</td>
+              <td class="medium">790</td>
+              <td>87</td>
+              <td>
+                <ul class="subject-list">
+                  <li>Heaps</li>
+                  <li>Greedy</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Profile detail grid -->
+    <div class="detail-grid">
+      <div class="detail-card">
+        <h4>Profile Information</h4>
+        <p><span class="detail-label">Name</span><span class="detail-val">Demo Name XYZ</span></p>
+        <p><span class="detail-label">Email</span><span class="detail-val">demo@vit.ac.in</span></p>
+        <p><span class="detail-label">Username</span><span class="detail-val">demo_user</span></p>
+        <p><span class="detail-label">Country</span><span class="detail-val">India</span></p>
+        <p><span class="detail-label">City</span><span class="detail-val">Vellore</span></p>
+        <p><span class="detail-label">Designation</span><span class="detail-val">Student</span></p>
+        <p><span class="detail-label">Member Since</span><span class="detail-val" id="memberSince"></span></p>
+      </div>
+
+      <div class="detail-card">
+        <h4>Login Activity</h4>
+        <p><span class="detail-label">Last Login</span><span class="detail-val" id="lastLogin"></span></p>
+        <p><span class="detail-label">Current Status</span><span class="detail-val" style="color: var(--green);">● Online</span></p>
+        <p><span class="detail-label">Sessions</span><span class="detail-val">12 this month</span></p>
+        <p><span class="detail-label">Device</span><span class="detail-val">Desktop Browser</span></p>
+        <p><span class="detail-label">Platform</span><span class="detail-val">AlgoTracker Web</span></p>
+      </div>
+
+      <div class="detail-card">
+        <h4>DSA Rankings</h4>
+        <p><span class="detail-label">Global Rank</span><span class="detail-val easy">&#9650; 1234</span></p>
+        <p><span class="detail-label">Country Rank</span><span class="detail-val easy">&#9650; 56</span></p>
+        <p><span class="detail-label">Platform Rank</span><span class="detail-val medium">&#9650; 78</span></p>
+        <p><span class="detail-label">Problems Solved</span><span class="detail-val">-</span></p>
+        <p><span class="detail-label">Streak</span><span class="detail-val">14 days</span></p>
+      </div>
+
+      <div class="detail-card">
+        <h4>Achievements</h4>
+        <ul class="achieve-list">
+          <li>Completed 44 problems on GFG</li>
+          <li>Created Personal Portfolio Website</li>
+          <li>Contributed to open-source DSA projects</li>
+          <li>14-day problem-solving streak</li>
+          <li>Top 100 in college leaderboard</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <hr class="section-hr">
+  <footer class="site-footer">
+    <p>&copy; 2026 AlgoTracker. All rights reserved.</p>
+  </footer>
+  <script>
+    // Dropdown toggle function
+function toggleDropdown() {
+  var dropdown = document.getElementById("resourcesDropdown");
+  dropdown.classList.toggle("show");
+}
+
+// Close dropdown when clicking outside
+document.addEventListener("click", function(event) {
+  var dropdown = document.getElementById("resourcesDropdown");
+  var dropdownBtn = document.querySelector(".dropdown-btn");
+  
+  if (dropdown && dropdownBtn) {
+    if (!dropdownBtn.contains(event.target) && !dropdown.contains(event.target)) {
+      dropdown.classList.remove("show");
+    }
+  }
+});
+    function displayDate() {
+      var dt = new Date();
+      var formatted = dt.toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' });
+      document.getElementById("memberSince").innerHTML = "Jan 2026";
+      document.getElementById("lastLogin").innerHTML = formatted;
+    }
+    displayDate();
+  </script>
+
+</body>
+</html>
